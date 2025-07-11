@@ -1,4 +1,4 @@
-// Lexer
+// lexer
 export enum TokenType {
     Number,
     Identifier,
@@ -7,6 +7,7 @@ export enum TokenType {
     CloseParent,
     BinaryOperator,
     Let,
+    EOF,
 }
 
 const KEYWORDS: Record<string, TokenType> = {
@@ -45,12 +46,11 @@ export function tokenize(sourceCode: string): Token[] {
             tokens.push(token(src.shift(), TokenType.OpenParent));
         } else if (src[0] == ")") {
             tokens.push(token(src.shift(), TokenType.CloseParent));
-        } else if (src[0] == "+" || src[0] == "-" || src[0] == "*" || src[0] == "/") {
+        } else if (src[0] == "+" || src[0] == "-" || src[0] == "*" || src[0] == "/" || src[0] == "%") {
             tokens.push(token(src.shift(), TokenType.BinaryOperator));
         } else if (src[0] == '=') {
             tokens.push(token(src.shift(), TokenType.Equals));
         } else {
-
             if (isint(src[0])) {
                 let num = "";
                 while (src.length > 0 && isint(src[0])) {
@@ -63,20 +63,22 @@ export function tokenize(sourceCode: string): Token[] {
                 while (src.length > 0 && isalpha(src[0])) {
                     ident += src.shift();
                 }
+
                 const reserved = KEYWORDS[ident];
-                if (reserved == undefined) {
-                tokens.push(token(ident, TokenType.Identifier));
+                if (reserved) {
+                tokens.push(token(ident, reserved));
                 } else {
-                    tokens.push(token(ident, reserved));
+                    tokens.push(token(ident, TokenType.Identifier));
                 }
             } else if (isskippable(src[0])) {
                 src.shift();
             } else {
-                console.log("Unrecognized character found in source: ", src[0]);
+                console.log("Unrecognized character found in source: ", src[0].charCodeAt(0), src[0]);
                 Deno.exit(1);
             }
         }
     }
 
+    tokens.push({type: TokenType.EOF, value: "EndOfFile"});
     return tokens;
 }
