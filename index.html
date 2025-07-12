@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/script.js"></script>
     <title>DivineC</title>
 </head>
 <body>
+    <script src="./js/divinec-interpreter.js"></script>
+    <script src="./js/examples.js"></script>
+    <script src="./js/script.js"></script>
     <div class="container">
         <header class="header">
             <h1>DivineC</h1>
@@ -18,9 +20,84 @@
         <main class="main-content">
             <section class="editor-section">
                 <h2 class="section-title">Divine Code Editor</h2>
-                
+                <div class="controls">
+                    <button class="btn" id="runButton" title="Execute Divine Code (Ctrl/Cmd + Enter)">
+                        Execute
+                    </button>
+                    <button class="btn btn-clear" id="clearButton" title="Clear Editor (Ctrl/Cmd + L)">
+                        Clear
+                    </button>
+                </div>
+                <textarea class="code-editor" id="codeEditor" placeholder="// Write your divine code here...&#10;let there be int of age = 25;&#10;let there be string of name = &quot;Moses&quot;;&#10;print age;&#10;print name;"
+                aria-label="DivineC Code Editor"></textarea> 
+            </section>
+
+            <section class="output-section">
+                <h2 class="section-title">Divine Output</h2>
+                <div id="output" class="output-area" aria-label="Program Output"
+                role="log">Welcome to DivineC-lang! Execute your holy code to see your divine results...</div>
             </section>
         </main>
+
+        <section class="examples">
+            <h2 class="section-title">Holy Examples</h2>
+            <div class="example-btn" data-example="hello" title="Basic hello world program">Hello, World!</div>
+            <div class="example-btn" data-example="variables" title="Variable declaration examples">Variables</div>
+            <div class="example-btn" data-example="math" title="Mathematical operations">Mathematics</div>
+            <div class="example-btn" data-example="conditions" title="Conditional logic">Conditions</div>
+            <div class="example-btn" data-example="loops" title="Loop constructs">Loops</div>
+        </section>
+
+        <section class="syntax-highlight">
+            <h2 class="section-title">Divine Syntax Reference</h2>
+            <table class="syntax-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>DivineC Syntax</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Variable Declaration</td>
+                        <td><span class="keyword">let there be</span> int <span class="keyword">of</span> age = 25;</td>
+                        <td>Declares a variable with divine syntax</td>
+                    </tr>
+                    <tr>
+                        <td>Function Declaration</td>
+                        <td><span class="keyword">blessed function</span> getName() { }</td>
+                        <td>Declares a blessed function</td>
+                    </tr>
+                    <tr>
+                        <td>Print Statement</td>
+                        <td><span class="keyword">print</span> "Hello World";</td>
+                        <td>Outputs divine messages</td>
+                    </tr>
+                    <tr>
+                        <td>Conditionals</td>
+                        <td><span class="keyword">if</span> (age &gt; 18) { }</td>
+                        <td>Divine decision making</td>
+                    </tr>
+                    <tr>
+                        <td>Error Handling</td>
+                        <td><span class="keyword">pray</span> { } <span class="keyword">forgive</span> { }</td>
+                        <td>Sacred error handling</td>
+                    </tr>
+                    <tr>
+                        <td>Constants</td>
+                        <td><span class="keyword">sacred</span> PI = 3.14159;</td>
+                        <td>Sacred unchanging values</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer class="footer">
+            <p>DivineC - Doing good by coding </p>
+            <p>© 2025 - May your code be blessed and bug-free</p>
+            <p style="text-align: center;">Aleksander Smaga - asmagaa - grldni</p>
+        </footer>
     </div>
 </body>
 </html>
