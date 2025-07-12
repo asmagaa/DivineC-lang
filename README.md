@@ -1,2 +1,0 @@
-# eslng
-esolang.
