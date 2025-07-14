@@ -1,6 +1,6 @@
 # DivineC
 
-DivineC is my own Esoteric Programming Language inspired by Terry A. Davis's HolyC-lang. DivineC is a form of extension to HolyC lang such as C++ to C, yet with "more holyness" and references to the Bible and Testaments (unfortunately it's not what you think 😭 - I would need more time, experience and knowledge to implement things on that level).
+DivineC is my own Esoteric Programming Language inspired by Terry A. Davis's HolyC-lang. DivineC is a form of extension to HolyC lang such as C++ to C, yet with "more holyness" and references to the Bible and Testaments.
 
 ![logo](./divineC.png)
 
