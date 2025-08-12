@@ -20,9 +20,7 @@ Write blessed code using divine keywords like `let there be`, `sacred`, `blessed
 
 ## Quick Start
 
-The easiest way to try DivineC right now is through the website:
-
-[GitHub Pages link](https://asmagaa.github.io/DivineC-lang/)
+The easiest way to try DivineC right now is through the [website](https://divinec.vercel.app/) 
 
 # DISCLAIMER
 
@@ -35,7 +33,6 @@ As a believer and a respectful programmer myself, I want to be absolutely clear 
 - **All religious references are used with respect and humor**, not to trivialize or diminish the importance of faith,
 - **This is a programming exercise and creative project**, not a statement about religion or spirituality,
 - **I deeply respect all faiths and belief systems** - this project comes from a place of appreciation for the creativity and passion of the programming community.
-
 
 
 **✨ May your code be blessed and bug-free! ✨**
