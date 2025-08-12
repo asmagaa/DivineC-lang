@@ -1,0 +1,233 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', 'Consolas', monospace;
+            background: cyan;
+            color: yellow;
+            border: yellow 3px solid;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: yellow;
+            margin-bottom: 40px;
+            border: 2px solid gold;
+            padding: 20px;
+            background: yellow;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0px red;
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-weight: bolder;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: cyan;
+            font-family: 'Courier New', monospace;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .output-section {
+            background: yellow;
+            border: 3px solid gold;
+            border-radius: 0;
+            padding: 25px;
+        }
+
+        .editor-section {
+            background: yellow;
+            border: 3px solid gold;
+            border-radius: 0;
+            padding: 25px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: cyan;
+            font-weight: bolder;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+        }
+
+        .code-editor {
+            width: 100%;
+            height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            background: darkblue;
+            color: yellow;
+            border: 2px solid yellow;
+            border-radius: 0;
+            padding: 15px;
+            resize: none;
+            outline: none;
+            line-height: 1.5;
+        }
+
+        .output-area {
+            width: 100%;
+            height: 400px;
+            background: darkblue;
+            color: yellow;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            border: 2px solid yellow;
+            border-radius: 0;
+            padding: 15px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.5;
+            margin-top: 80px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background: red;
+            color: white;
+            border: 2px solid white;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .btn:hover {
+            background: white;
+            color: gold;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        .btn:active {
+            background: yellow;
+            color: white;
+        }
+
+        .btn-clear {
+            background: cyan;
+            color: white;
+        }
+
+        .examples {
+            background: yellow;
+            border: 3px solid gold;
+            border-radius: 0;
+            padding: 25px;
+        }
+
+        .example-btn {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 16px;
+            background: cyan;
+            border: 2px solid white;
+            border-radius: 0;
+            box-shadow: 0 0 10px cyan;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            color: white;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+
+        .example-btn:hover {
+            background: white;
+            color: gold;
+            box-shadow: 0 0 5px yellow;
+        }
+
+        .syntax-highlight {
+            background: yellow;
+            border: 3px solid gold;
+            border-radius: 0;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .syntax-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .syntax-table th,
+        .syntax-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid yellow;
+            color: black;
+            font-family: 'Courier New', monospace;
+        }
+
+        .syntax-table th {
+            background: darkblue;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        .keyword {
+            color: cyan;
+            font-weight: bold;
+            text-shadow: 2px 1px 0 cyan;
+        }
+
+        .footer {
+            text-align: center;
+            color: cyan;
+            margin-top: 40px;
+            padding: 20px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            border: 2px solid gold;
+            font-family: 'Courier New', monospace;
+            background: yellow;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+        }
